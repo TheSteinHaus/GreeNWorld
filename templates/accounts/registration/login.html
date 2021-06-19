@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="login-style">
+    <h1>ЭкоВход</h1>
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}"/>
+            <p><input type="submit" value="Вход"></p>
+            <div class="password_reset">
+                <a href="{% url 'password_reset' %}">Забыли пароль?</a>
+            </div>
+        </form>
+    </div>
+    </div>
+{% endblock content %}

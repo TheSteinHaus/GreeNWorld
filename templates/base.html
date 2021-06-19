@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Home</title>
+    {% endif %}
+</head>
+<body>
+
+
+    <header>
+        <div class = main_menu>
+           <a href="{% url 'home' %}">GreenWorld</a>
+            <a href="{% url 'map' %}">Map</a>
+            <img src="{% static 'images/recycle-symbol_121942.png' %}"/>
+
+            {% if request.user.is_authenticated %}
+            <div>
+                <a href = "{% url 'Profile' %}">My Profile</a>
+            |
+                <a href = "{% url 'logout' %}">Log out</a>
+            </div>
+
+            {% else %}
+            <div>
+                <a href="{% url 'login' %}"> <span>Log in </span></a>
+                |
+                <a href="{% url 'signup' %}"><span>Registration</span></a>
+            </div>
+            {% endif %}
+        </div>
+    </header>
+
+
+    {% block content %}
+
+    <div class = "forma">
+    <form>
+        <input id="search" name="search" data-list="#list" data-toggle="hideseek" data-nodata="Нет результатов" size="100" type="search" title="Введите название продукта" placeholder="Искать здесь..." required autocomplete="off">
+        <button type="submit"></button>
+    </form>
+
+        <div class="objects" id="ul_objects">
+            <ul id="list" class="list-main">
+                <li>adc</li>
+                <li>bdc</li>
+                <li>erq</li>
+                <li>twet</li>
+                <li>acd</li>
+                <li>adc</li>
+                <li>bdc</li>
+                <li>erq</li>
+                <li>twet</li>
+                <li>acd</li>
+                <li>adc</li>
+                <li>bdc</li>
+                <li>erq</li>
+                <li>twet</li>
+                <li>acd</li>
+                <li>adc</li>
+                <li>bdc</li>
+                <li>erq</li>
+                <li>twet</li>
+                <li>acd</li>
+            </ul>
+        </div>
+
+    </div>
+
+    {% endblock content %}
+
+    <div class="waveWrapper waveAnimation">
+  <div class="waveWrapperInner bgTop">
+    <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgMiddle">
+    <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgBottom">
+    <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+  </div>
+    </div>
+
+    {% block extrahead %}
+    <script type="text/javascript" src="{% static 'js/HideSeek-master/jquery-1.9.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/HideSeek-master/jquery.hideseek.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/parse-posts.js' %}"></script>
+    {% endblock extrahead %}
+
+</body>
+</html>

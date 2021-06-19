@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <label class="lable">
+        <input type="checkbox" />
+        <div class="flip-card">
+            <div class="front">
+                <div class="list" data-title="Красный - упаковка сложно перерабатывается">
+                <img src="{% static 'images/klen-red.png' %}" class="level"/>
+                </div>
+                <div class="front-cont">
+                    <img src="{% static 'images/бутылка.jpg' %}" width="50%" class="photo"/>
+                    <div class="front-inf">
+                        <span style="font: 30px arial">Pulpy</span>
+                        <div style="display: flex; align-items: center; flex-direction: column;">
+                            <span style="font:24px arial; padding-bottom: 2%;">Тип материала</span>
+                            <span style="font:24px arial;">Пластик</span>
+                        </div>
+                            
+                             <img src="images/1-pet.jpg" width="50%">
+                               
+
+                    </div>
+                </div>
+            </div>
+        
+            <div class="back">
+                <h1>back</h1>
+                <p class="click">flip</p>
+            </div>
+        </div>
+    </label>
+
+{% endblock %}

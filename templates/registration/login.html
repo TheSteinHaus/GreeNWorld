@@ -7,11 +7,11 @@
         <form action="{% url 'login' %}" method="post">
             {{ form.as_p }}
             {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}"/>
-            <p><input type="submit" value="Вход"></p>
             <div class="password_reset">
                 <a href="{% url 'password_reset' %}">Забыли пароль?</a>
             </div>
+            <button class="btn-login" type="submit"></button>
+
         </form>
     </div>
     </div>

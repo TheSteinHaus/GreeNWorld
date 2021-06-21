@@ -8,12 +8,11 @@
       <jdbc-url>jdbc:sqlite:F:\PyCharm\GreeNProject\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="postgres@localhost" uuid="e8ba7aa3-230b-4a1b-9d79-3dad9da817ec">
+    <data-source source="LOCAL" name="USERS_INFO@localhost" uuid="57851241-231c-4cf3-b277-dbe4b13da39b">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/USERS_INFO</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

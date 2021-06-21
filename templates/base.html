@@ -20,22 +20,22 @@
 
     <header>
         <div class = main_menu>
-           <a href="{% url 'home' %}">GreenWorld</a>
-            <a href="{% url 'map' %}">Map</a>
+            <span style="font-family:medium"><a href="{% url 'home' %}">GreenWorld</a></span>
+            <a href="{% url 'map' %}">Карта</a>
             <img src="{% static 'images/recycle-symbol_121942.png' %}"/>
 
             {% if request.user.is_authenticated %}
             <div>
-                <a href = "{% url 'Profile' %}">My Profile</a>
+                <a href = "{% url 'Profile' %}">Мой профиль </a>
             |
-                <a href = "{% url 'logout' %}">Log out</a>
+                <a href = "{% url 'logout' %}">Выход </a>
             </div>
 
             {% else %}
             <div>
-                <a href="{% url 'login' %}"> <span>Log in </span></a>
+                <a href="{% url 'login' %}"> <span>Вход </span></a>
                 |
-                <a href="{% url 'signup' %}"><span>Registration</span></a>
+                <a href="{% url 'signup' %}"><span>Регистрация</span></a>
             </div>
             {% endif %}
         </div>

@@ -2,13 +2,23 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: light ;
+    src: url(fonts/Neris-Light.otf);
+}
+
+@font-face {
+    font-family: medium;
+    src: url(fonts/Neris-SemiBold.otf)
+}
+
 .main_menu{
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
     align-items: center;
     justify-content: space-between;
-    font: 18px Arial;
+    font: 18px light;
     padding-top:10px;
     padding-bottom: 10px;
     height: 30px
@@ -196,19 +206,84 @@ body {
 }
 
 .login-style, .signup-style {
+    font-family: light;
     display: flex;
     align-items: center;
-    align-self: center;
     flex-direction: column;
     padding-top: 2%;
     color: #454444;
+    font-size: 20px;
 }
 
 .login-style h1, .signup-style h1 {
-    /*border: 2px solid black;*/
     background-color: rgba(255, 255, 255, 0.5);
     padding: 30px;
     border-radius: 30px;
+}
+
+.password_reset > a{
+    text-decoration: none;
+}
+
+.password_reset {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.btn-reg, .btn-login {
+    margin-left: 35%;
+    font-size: 20px;
+    padding-bottom: 1%;
+    border: 10px solid rgb(238, 212, 197);
+    background-color: rgb(250, 229, 218);
+    font-family: light;
+    border-radius: 40px;
+    width: 25%;
+    height: 2%;
+}
+
+.btn-login {
+    width: 22%;
+}
+
+.btn-reg::before, .btn-reg::after, .btn-login::before, .btn-login::after {
+    content: "";
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 3%;
+    margin-right: 10%;
+}
+
+.btn-reg:hover::after, .btn-login:hover::after {
+    animation: moving 1.5s infinite;
+}
+
+.btn-reg:hover::before, .btn-login:hover::before {
+    animation: moving 1.5s infinite;
+    animation-delay: 0.1s;
+}
+
+@keyframes moving {
+    from {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        transform: translateY(0%) rotate(-45deg);
+    }
+    25% {
+        border: solid mediumspringgreen;
+        border-width: 0 3px 3px 0;
+        transform: translateY(-30%) rotate(-45deg);
+    }
+    75% {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        transform: translateY(0%) rotate(-45deg);
+    }
 }
 
 .deactive {
@@ -217,7 +292,7 @@ body {
 }
 
 .lable {
-    display: flex;
+    /*display: flex;*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -230,6 +305,7 @@ body {
 }
 
 .flip-card {
+    font-family: light;
     position: relative;
     width: 100%;
     height: 100%;
@@ -244,9 +320,11 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    background: purple;
+    background: white;
     backface-visibility: hidden;
     border-radius: 40px;
+     border: 1px solid #828282;
+    box-shadow: 2px 4px 10px #828282;
     padding: 2% 2% 2% 2%;
 }
 
@@ -259,22 +337,22 @@ body {
     transform: rotateX(2deg);
 }
 
-/*.list:hover::after{*/
-/*    content: attr(data-title);*/
-/*    position: absolute;*/
-/*    bottom: 7%;*/
-/*    right: 6%;*/
-/*    z-index: 8;*/
-/*    background: chocolate;*/
-/*    font-size: 11px;*/
-/*    padding: 5px 10px;*/
-/*    border: 1px solid #333;*/
-/*}*/
+.list:hover::after{
+    content: attr(data-title);
+    position: absolute;
+    bottom: 7%;
+    right: 6%;
+    z-index: 8;
+    background: rgb(255, 247, 247);
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 
 .flip-card .back{
     transform: rotateX(180deg);
     color: #000;
-    background: purple;
+    background: white;
 }
 
 /*label:hover .flip-card{*/
@@ -310,7 +388,7 @@ label input {
     align-items: center;
 }
 
-.photo{
+.photo {
     border-radius: 40px; /* Радиус скругления */
     border: 0px solid white; /* Параметры рамки */
 }

@@ -61,7 +61,7 @@ ROOT_URLCONF = 'Green.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,7 +88,7 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'USERS_INFO',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': 'localhost',

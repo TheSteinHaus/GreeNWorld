@@ -231,20 +231,22 @@ body {
     margin-bottom: 3%;
 }
 
-.btn-reg, .btn-login {
-    margin-left: 35%;
-    font-size: 20px;
-    padding-bottom: 1%;
-    border: 10px solid rgb(238, 212, 197);
-    background-color: rgb(250, 229, 218);
-    font-family: light;
-    border-radius: 40px;
-    width: 25%;
-    height: 2%;
+.btn {
+    display: flex;
+    justify-content: center;
 }
 
-.btn-login {
-    width: 22%;
+.btn-reg, .btn-login {
+    display: flex;
+    font-size: 20px;
+    padding-bottom: 1%;
+    border: 10px solid rgb(250, 229, 218);
+    background-color: rgb(255, 255, 255);
+    font-family: light;
+    border-radius: 40px;
+    width: 75px;
+    /*height: 2%;*/
+    cursor: pointer;
 }
 
 .btn-reg::before, .btn-reg::after, .btn-login::before, .btn-login::after {
@@ -255,8 +257,7 @@ body {
     -webkit-transform: rotate(-45deg);
     display: inline-block;
     padding: 5px;
-    margin-bottom: 3%;
-    margin-right: 10%;
+    margin: 15% 10% 10% 5%;
 }
 
 .btn-reg:hover::after, .btn-login:hover::after {
@@ -275,7 +276,7 @@ body {
         transform: translateY(0%) rotate(-45deg);
     }
     25% {
-        border: solid mediumspringgreen;
+        border: solid #36f383;
         border-width: 0 3px 3px 0;
         transform: translateY(-30%) rotate(-45deg);
     }
@@ -312,6 +313,7 @@ body {
     transform-style:preserve-3d;
     transition: all 0.5s ease-in-out;
     z-index: 1;
+    padding-bottom: 2%;
 }
 
 .flip-card .front,
@@ -391,4 +393,54 @@ label input {
 .photo {
     border-radius: 40px; /* Радиус скругления */
     border: 0px solid white; /* Параметры рамки */
+}
+
+.profile_label{
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.profile_label1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 1%;
+}
+
+.profile_label h1{
+    color: #454444;
+}
+
+.profile_label_bg{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 1%;
+}
+.profile_img{
+    width: 40%;
+}
+.profile_img img{
+    width: 100%;
+    border-radius: 30px 10px 10px 10px;
+}
+
+.profile_photo{
+    margin-right: 5%;
+    margin-left: 3%;
+}
+
+.profile_name_email{
+    margin-right: 20%;
 }

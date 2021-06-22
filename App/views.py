@@ -6,8 +6,8 @@ def Home(request):
 
 
 def Map(request):
-    return render(request, 'map.html', {'title': 'Map'})
+    return render(request, 'map.html', {'title': 'Карта'})
 
 
 def Card(request):
-    return render(request, 'cardflip.html', {'title': 'Card'})
+    return render(request, 'cardflip.html', {'title': 'Карточка продукта'})

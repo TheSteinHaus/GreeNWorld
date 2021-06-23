@@ -52,30 +52,15 @@
 
         <div class="objects" id="ul_objects">
             <ul id="list" class="list-main">
-                <li>adc</li>
-                <li>bdc</li>
-                <li>erq</li>
-                <li>twet</li>
-                <li>acd</li>
-                <li>adc</li>
-                <li>bdc</li>
-                <li>erq</li>
-                <li>twet</li>
-                <li>acd</li>
-                <li>adc</li>
-                <li>bdc</li>
-                <li>erq</li>
-                <li>twet</li>
-                <li>acd</li>
-                <li>adc</li>
-                <li>bdc</li>
-                <li>erq</li>
-                <li>twet</li>
-                <li>acd</li>
+                {% for prod in products.all %}
+                <li>{{ prod.prod_name }}: {{ prod.prod_type }}</li>
+                {% endfor %}
             </ul>
         </div>
 
     </div>
+
+
 
     {% endblock content %}
 

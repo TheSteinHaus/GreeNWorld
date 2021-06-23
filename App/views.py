@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from .models import Product
 
 
 def Home(request):
-    return render(request, 'base.html', {})
+    products = Product.objects
+    return render(request, 'base.html', {'products': products})
 
 
 def Map(request):

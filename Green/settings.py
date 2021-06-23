@@ -141,6 +141,9 @@ USE_TZ = True
 STATIC_URL = 'App/static/'
 STATIC_ROOT = 'App/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 LOGIN_REDIRECT_URL = reverse_lazy('Profile')
 LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')

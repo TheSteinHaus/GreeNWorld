@@ -8,4 +8,5 @@ urlpatterns = [
     path('map', views.Map, name='map'),
     path('card', views.Card, name='card'),
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+              + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
